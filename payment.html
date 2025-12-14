@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Payment | FreshCart</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .payment-hero {
+    height: 50vh;
+    background: url('../img/placeholder.jpg') center/cover no-repeat;
+}
+.payment-form {
+    background-color: var(--white);
+    padding: 30px;
+    border-radius: 20px;
+    box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+}
+
+.payment-form h2 {
+    color: var(--blue);
+    margin-bottom: 20px;
+}
+
+.payment-form input {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border-radius: 10px;
+    border: 1px solid #ccc;
+}
+@media (max-width: 768px) {
+    .payment {
+        grid-template-columns: 1fr;
+        margin-top: 0;
+    }
+
+    .payment-hero {
+        height: 40vh;
+    }
+    
+}
+
+    </style>
+</head>
+<body>
+
+    <!-- Announcement Bar -->
+    <div class="announcement-bar">
+        Secure checkout • Fast & safe payment
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="logo">FreshCart</div>
+
+        <div class="nav-links">
+            <a href="index.html">Home</a>
+            <a href="products.html">Products</a>
+            <a href="cart.html">Cart</a>
+            <a href="contact.html">Contact</a>
+        </div>
+
+        <div class="nav-icons">
+            <span>🔍</span>
+            <span>🛒</span>
+        </div>
+
+        <div class="hamburger">☰</div>
+    </nav>
+
+    <!-- PAYMENT HERO (LIKE INDEX PAGE) -->
+    <section class="hero payment-hero">
+        <div class="hero-overlay"></div>
+        <div class="hero-content">
+            <h1>Secure Payment</h1>
+            <p>Complete your purchase with confidence</p>
+        </div>
+    </section>
+
+    <!-- PAYMENT CONTENT -->
+    <section class="payment container">
+
+        <!-- LEFT: PAYMENT FORM -->
+        <form class="payment-form">
+            <h2>Choose Payment Method</h2>
+
+            <div class="payment-methods">
+                <label class="method-card">
+                    <input type="radio" name="payment" checked>
+                    <span>💳 Credit / Debit Card</span>
+                </label>
+
+                <label class="method-card">
+                    <input type="radio" name="payment">
+                    <span>🅿️ PayPal</span>
+                </label>
+            </div>
+
+            <div class="card-details">
+                <input type="text" placeholder="Cardholder Name">
+                <input type="text" placeholder="Card Number">
+
+                <div class="payment-row">
+                    <input type="text" placeholder="MM / YY">
+                    <input type="password" placeholder="CVV">
+                </div>
+            </div>
+
+            
+
+           <a href="success.html" class="cta-button">Confirm Payment</a>
+
+        </form>
+
+        <!-- RIGHT: ORDER SUMMARY -->
+        <div class="payment-summary">
+            <h2>Order Summary</h2>
+
+            <div class="summary-row">
+                <span>Items</span>
+                <span>$11.97</span>
+            </div>
+
+            <div class="summary-row">
+                <span>Delivery</span>
+                <span>Free</span>
+            </div>
+
+            <div class="summary-total">
+                <span>Total</span>
+                <span>$11.97</span>
+            </div>
+        </div>
+
+    </section>
+
+</body>
+</html>
